@@ -1,5 +1,5 @@
 # 💫 About Me:
-I'm currently working on Projects<br>I'm currently learning AI/DS <br>AI ethics 
+I'm currently working on Projects<br>I'm currently learning AI/DS <br>AI ethics
 
 
 # 💻 Tech Stack:
