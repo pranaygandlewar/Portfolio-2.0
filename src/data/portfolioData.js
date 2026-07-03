@@ -8,6 +8,8 @@ export const personalInfo = {
   name: "Pranay Gandlewar",
   firstName: "Pranay",
   brandName: "Pranay",
+
+
   title: "AI & Data Science Student | Full-Stack Developer",
   location: "Nagpur, India",
   phone: "+91 95189-95110",
@@ -84,9 +86,8 @@ export const technicalSkills = {
         { name: "Python", level: 95 },
         { name: "SQL", level: 85 },
         { name: "JavaScript", level: 85 },
-        { name: "TypeScript", level: 80 },
-        { name: "C++", level: 80 },
-        { name: "Java", level: 75 }
+        { name: "TypeScript", level: 80 }
+
       ]
     },
     {
@@ -214,8 +215,9 @@ export const projects = [
     ],
     links: {
       github: "https://github.com/pranaygandlewar",
-      demo: null,
+      demo: "https://pranaygandlewar-text-to-speech.hf.space/",
     },
+
     isFlagship: true,
   },
   {
@@ -230,6 +232,8 @@ export const projects = [
       github: "https://github.com/pranaygandlewar",
       demo: null,
     },
+
+
     isFlagship: false,
   },
   {

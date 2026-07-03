@@ -10,6 +10,7 @@ import Leadership from './components/Leadership'
 import Education from './components/Education'
 import Certificates from './components/Certificates'
 import SoftSkills from './components/SoftSkills'
+import Contact from './components/Contact'
 import Footer from './components/Footer'
 
 function App() {
@@ -26,10 +27,12 @@ function App() {
       <Education />
       <Certificates />
       <SoftSkills />
+      <Contact />
       <Footer />
     </>
   )
 }
+
 
 export default App
 

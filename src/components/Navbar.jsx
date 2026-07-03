@@ -18,7 +18,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['Home', 'About', 'Skills', 'Projects'];
+  const navLinks = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
   const hireMeMailto = `mailto:${personalInfo.emails.primary}?subject=Hiring Inquiry – Portfolio&body=Hello ${personalInfo.firstName},%0D%0A%0D%0AI came across your portfolio and would like to discuss an opportunity with you.%0D%0A%0D%0ALooking forward to hearing from you.%0D%0ABest Regards,`;
 
@@ -26,12 +26,13 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isOpen 
-          ? 'bg-[#ff2a2a] py-4'
+          ? 'bg-[#ff2a2a]/95 backdrop-blur-md py-4'
           : isScrolled 
-            ? 'bg-transparent py-4' 
+            ? 'bg-black/40 backdrop-blur-md border-b border-white/10 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.3)]' 
             : 'bg-transparent py-6'
       }`}
     >
+
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
         
         {/* Left Side: Logo/Name */}
@@ -39,6 +40,8 @@ const Navbar = () => {
           <a href="#" className="text-white text-2xl font-black tracking-tight whitespace-nowrap">
             {personalInfo.brandName}<span className="text-red-500">.</span>
           </a>
+
+
         </div>
 
         {/* Center: Desktop Menu Links */}

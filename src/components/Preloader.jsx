@@ -45,6 +45,8 @@ const Preloader = () => {
             >
               {personalInfo.brandName}<span className="text-black">.</span>
             </motion.div>
+
+
           </motion.div>
 
         </motion.div>
