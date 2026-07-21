@@ -83,32 +83,34 @@ export const technicalSkills = {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", level: 95 },
-        { name: "SQL", level: 85 },
-        { name: "JavaScript", level: 85 },
-        { name: "TypeScript", level: 80 }
-
+        { name: "Python", level: 90 },
+        { name: "SQL", level: 80 },
+        { name: "JavaScript", level: 60 },
+        { name: "TypeScript", level: 90 },
+        { name: "C", level: 90 }
       ]
     },
     {
       title: "Frontend Stack",
       skills: [
-        { name: "React.js", level: 90 },
-        { name: "HTML5 & CSS3", level: 95 },
+        { name: "React.js", level: 80 },
+        { name: "HTML5 & CSS3", level: 100 },
         { name: "Tailwind CSS", level: 90 },
-        { name: "Bootstrap", level: 85 },
+        { name: "Bootstrap", level: 90 },
         { name: "Vite", level: 90 }
       ]
     },
     {
       title: "Backend Stack",
       skills: [
+        { name: "Python", level: 90 },
         { name: "FastAPI", level: 90 },
         { name: "Flask", level: 85 },
         { name: "REST APIs", level: 90 },
         { name: "SQLAlchemy", level: 85 }
       ]
     },
+
     {
       title: "Databases",
       skills: [

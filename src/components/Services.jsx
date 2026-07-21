@@ -32,7 +32,7 @@ const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength
       data-aos={aosType || "fade-up"} 
       data-aos-delay={aosDelay}
       className={`w-72 sm:w-80 rounded-[2rem] p-2 relative flex flex-col items-center hover:scale-[1.02] transition-all duration-700 z-10 ${className} ${
-        isActive ? 'bg-[#ff2a2a] border-red-400 shadow-[0_20px_50px_rgba(255,42,42,0.4)]' : 'bg-white border border-gray-200 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]'
+        isActive ? 'bg-[#8c7d6b] border-[#a89a88] shadow-[0_20px_50px_rgba(140,125,107,0.4)]' : 'bg-white border border-gray-200 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]'
       }`}
     >
       {/* The hole punch */}
@@ -42,10 +42,10 @@ const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength
       
       {/* Inner container */}
       <div className={`w-full h-full rounded-[1.5rem] mt-8 p-8 flex flex-col min-h-[220px] transition-colors duration-700 ${
-        isActive ? 'bg-red-700/50' : 'bg-[#f4f4f4]'
+        isActive ? 'bg-[#7a6b5a]' : 'bg-[#f4f4f4]'
       }`}>
         <span className={`text-xl font-bold mb-2 font-serif italic transition-colors duration-700 ${
-          isActive ? 'text-red-200' : 'text-gray-400'
+          isActive ? 'text-[#f4ece1]' : 'text-gray-400'
         }`}>{number}</span>
         
         <h3 className={`text-2xl font-black mb-3 tracking-tight transition-colors duration-700 ${
@@ -53,13 +53,14 @@ const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength
         }`}>{title}</h3>
         
         <p className={`text-sm leading-relaxed font-medium transition-colors duration-700 ${
-          isActive ? 'text-red-100' : 'text-gray-500'
+          isActive ? 'text-[#fafafa]/90' : 'text-gray-500'
         }`}>
           {text}
         </p>
       </div>
     </div>
   );
+
 };
 
 const Services = () => {

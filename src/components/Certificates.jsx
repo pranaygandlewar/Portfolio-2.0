@@ -5,15 +5,15 @@ const CertificateCard = ({ cert, aosDelay }) => (
   <div 
     data-aos="zoom-in"
     data-aos-delay={aosDelay}
-    className="bg-black/20 backdrop-blur-sm rounded-2xl p-5 border border-white/10 hover:border-white/25 hover:scale-105 hover:shadow-[0_15px_40px_rgba(0,0,0,0.3)] transition-all duration-500 cursor-default group"
+    className="bg-black/5 backdrop-blur-sm rounded-2xl p-5 border border-black/10 hover:border-black/25 hover:scale-105 hover:shadow-[0_15px_40px_rgba(0,0,0,0.1)] transition-all duration-500 cursor-default group"
   >
     <div className="flex items-start gap-4">
       <span className="text-2xl mt-0.5 group-hover:scale-110 transition-transform duration-300">{cert.icon}</span>
       <div>
-        <h3 className="text-white font-bold text-sm md:text-base leading-tight mb-1 group-hover:text-white transition-colors">
+        <h3 className="text-[#08080a] font-bold text-sm md:text-base leading-tight mb-1 group-hover:text-black transition-colors">
           {cert.name}
         </h3>
-        <p className="text-white/50 text-xs font-semibold uppercase tracking-wider">
+        <p className="text-[#08080a]/60 text-xs font-semibold uppercase tracking-wider">
           {cert.issuer}
         </p>
       </div>
@@ -23,7 +23,7 @@ const CertificateCard = ({ cert, aosDelay }) => (
 
 const Certificates = () => {
   return (
-    <section className="bg-[#ff2a2a] pt-20 pb-28 px-6 md:px-12 w-full relative overflow-hidden font-sans">
+    <section className="bg-[#e3dfd5] text-[#08080a] pt-20 pb-28 px-6 md:px-12 w-full relative overflow-hidden font-sans">
       
       {/* Torn paper divider at top (transition from dark Projects section) */}
       <div className="absolute top-0 left-0 w-full pointer-events-none z-10 transform -translate-y-[1px] rotate-180">
@@ -35,13 +35,14 @@ const Certificates = () => {
       <div className="max-w-6xl mx-auto relative z-20">
         {/* Header */}
         <div data-aos="fade-up" className="mb-12 md:mb-16 text-center">
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-black text-[#08080a] mb-4 tracking-tight">
             Certifications
           </h2>
-          <p className="text-red-100 text-base md:text-lg font-semibold max-w-lg mx-auto">
+          <p className="text-[#08080a]/80 text-base md:text-lg font-semibold max-w-lg mx-auto">
             Industry-recognized certifications that validate my technical expertise.
           </p>
         </div>
+
 
         {/* Certificate Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
@@ -62,7 +63,8 @@ const Certificates = () => {
             rel="noopener noreferrer"
             className="flex items-center gap-3 px-8 py-3.5 rounded-full bg-white text-black font-bold text-base hover:bg-gray-100 hover:scale-105 hover:shadow-[0_10px_30px_rgba(0,0,0,0.2)] transition-all duration-300 group"
           >
-            <svg className="w-5 h-5 text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-[#08080a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
             View All Certificates

@@ -19,7 +19,7 @@ const ProjectCard = ({ project, aosDelay }) => (
     data-aos-delay={aosDelay}
     className={`relative rounded-2xl p-[1px] group transition-all duration-500 ${
       project.isFlagship 
-        ? 'bg-gradient-to-br from-red-500/50 via-white/10 to-red-500/30 hover:from-red-500 hover:via-red-400/30 hover:to-red-500/60' 
+        ? 'bg-gradient-to-br from-[#e3dfd5]/50 via-white/10 to-[#e3dfd5]/30 hover:from-[#e3dfd5] hover:via-[#f5f2eb]/30 hover:to-[#e3dfd5]/60' 
         : 'bg-white/10 hover:bg-white/20'
     }`}
   >
@@ -30,7 +30,7 @@ const ProjectCard = ({ project, aosDelay }) => (
     }`}>
       {/* Badge */}
       {project.badge && (
-        <span className="inline-block text-xs font-bold tracking-widest uppercase text-red-400 bg-red-500/10 px-3 py-1 rounded-full border border-red-500/20 mb-4">
+        <span className="inline-block text-xs font-bold tracking-widest uppercase text-[#e3dfd5] bg-[#e3dfd5]/10 px-3 py-1 rounded-full border border-[#e3dfd5]/20 mb-4">
           {project.badge}
         </span>
       )}
@@ -51,7 +51,7 @@ const ProjectCard = ({ project, aosDelay }) => (
         {project.techTags.map((tag) => (
           <span 
             key={tag}
-            className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-red-500/20 hover:border-red-500/30 hover:text-red-300 transition-all duration-300 cursor-default"
+            className="px-3 py-1 text-xs font-bold text-white/70 bg-white/5 rounded-full border border-white/10 hover:bg-[#e3dfd5]/20 hover:border-[#e3dfd5]/30 hover:text-[#e3dfd5] transition-all duration-300 cursor-default"
           >
             {tag}
           </span>
@@ -81,7 +81,7 @@ const ProjectCard = ({ project, aosDelay }) => (
             rel={project.links.demo ? "noopener noreferrer" : undefined}
             className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
               project.links.demo 
-                ? 'bg-[#ff2a2a] text-white hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)]' 
+                ? 'bg-[#e3dfd5] text-[#08080a] hover:bg-[#f5f2eb] hover:shadow-[0_0_20px_rgba(227,223,213,0.4)]' 
                 : 'bg-white/5 text-white/40 border border-white/10 cursor-not-allowed'
             }`}
           >
@@ -96,12 +96,13 @@ const ProjectCard = ({ project, aosDelay }) => (
             href={project.links.frontendDemo}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#ff2a2a] text-white text-sm font-semibold hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,42,42,0.4)] transition-all duration-300"
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#e3dfd5] text-[#08080a] text-sm font-semibold hover:bg-[#f5f2eb] hover:shadow-[0_0_20px_rgba(227,223,213,0.4)] transition-all duration-300"
           >
             <ExternalLinkIcon />
             Frontend Demo
           </a>
         )}
+
 
         {/* Backend API (Karigar) */}
         {project.links.backendApi && (

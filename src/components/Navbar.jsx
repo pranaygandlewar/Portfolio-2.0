@@ -26,7 +26,7 @@ const Navbar = () => {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isOpen 
-          ? 'bg-[#ff2a2a]/95 backdrop-blur-md py-4'
+          ? 'bg-[#e3dfd5]/95 backdrop-blur-md py-4'
           : isScrolled 
             ? 'bg-black/40 backdrop-blur-md border-b border-white/10 py-4 shadow-[0_10px_30px_rgba(0,0,0,0.3)]' 
             : 'bg-transparent py-6'
@@ -37,8 +37,8 @@ const Navbar = () => {
         
         {/* Left Side: Logo/Name */}
         <div className="flex items-center">
-          <a href="#" className="text-white text-2xl font-black tracking-tight whitespace-nowrap">
-            {personalInfo.brandName}<span className="text-red-500">.</span>
+          <a href="#" className={`${isOpen ? 'text-[#08080a]' : 'text-white'} text-2xl font-black tracking-tight whitespace-nowrap`}>
+            {personalInfo.brandName}<span className={isOpen ? 'text-black' : 'text-[#e3dfd5]'}>.</span>
           </a>
 
 
@@ -54,7 +54,7 @@ const Navbar = () => {
             >
               {link}
               {/* Smooth hover underline */}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-500 transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#e3dfd5] transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </div>
@@ -63,42 +63,50 @@ const Navbar = () => {
         <div className="hidden md:block">
           <a 
             href={hireMeMailto}
-            className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] transition-all duration-300 backdrop-blur-md"
+            className="px-6 py-2.5 rounded-full bg-white/10 border border-white/20 text-white font-semibold hover:bg-white/20 hover:shadow-[0_0_15px_rgba(227,223,213,0.3)] transition-all duration-300 backdrop-blur-md"
           >
             Hire Me
           </a>
+
         </div>
 
         {/* Mobile Hamburger Menu Icon */}
         <div className="md:hidden flex items-center">
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="text-white focus:outline-none p-2"
+
+            className={`${isOpen ? 'text-[#08080a]' : 'text-white'} focus:outline-none p-2 w-10 h-10 flex flex-col justify-center items-center gap-1.5`}
+            aria-label="Toggle menu"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {isOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              )}
-            </svg>
+            <span 
+              className={`block w-6 h-0.5 bg-current transition-all duration-300 transform origin-center ${
+                isOpen ? 'rotate-45 translate-y-[4px]' : ''
+              }`}
+            />
+            <span 
+              className={`block w-6 h-0.5 bg-current transition-all duration-300 transform origin-center ${
+                isOpen ? '-rotate-45 -translate-y-[4px]' : ''
+              }`}
+            />
           </button>
         </div>
+
       </div>
 
       {/* Mobile Slide-Down Menu */}
       <div 
         className={`md:hidden absolute top-full left-0 w-full transition-all duration-300 overflow-hidden ${
-          isOpen ? 'max-h-96 py-4 opacity-100 bg-[#ff2a2a] shadow-2xl' : 'max-h-0 opacity-0 bg-transparent'
+          isOpen ? 'max-h-96 py-4 opacity-100 bg-[#e3dfd5]/85 backdrop-blur-lg border-b border-black/10 shadow-2xl' : 'max-h-0 opacity-0 bg-transparent'
         }`}
       >
+
         <div className="flex flex-col px-6 space-y-4">
           {navLinks.map((link) => (
             <a 
               key={link} 
               href={`#${link.toLowerCase()}`}
               onClick={() => setIsOpen(false)}
-              className="text-white hover:text-black font-bold text-lg border-b border-white/20 pb-2 transition-colors"
+              className="text-[#08080a] hover:text-[#08080a]/70 font-bold text-lg border-b border-black/10 pb-2 transition-colors"
             >
               {link}
             </a>
@@ -107,13 +115,14 @@ const Navbar = () => {
              <a 
                href={hireMeMailto}
                onClick={() => setIsOpen(false)} 
-               className="inline-block px-6 py-3 rounded-full bg-white text-[#ff2a2a] font-black hover:bg-black hover:text-white transition-colors w-full text-center shadow-lg"
+               className="inline-block px-6 py-3 rounded-full bg-[#08080a] text-[#e3dfd5] font-black hover:bg-white hover:text-[#08080a] transition-colors w-full text-center shadow-lg"
              >
                Hire Me
              </a>
           </div>
         </div>
       </div>
+
     </nav>
   );
 };
